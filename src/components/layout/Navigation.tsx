@@ -1,6 +1,8 @@
 'use client';
 import classNames from 'classnames';
+import Link from 'next/link';
 
+import { BrandPill } from '@/components/layout/BrandPill';
 export interface NavigationProps {
   bg?: boolean;
   noLightbar?: boolean;
@@ -9,8 +11,8 @@ export interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({
   bg,
-  noLightbar,
-  doBackground,
+  noLightbar = true,
+  doBackground = true,
 }) => {
   return (
     <>
@@ -69,14 +71,14 @@ export const Navigation: React.FC<NavigationProps> = ({
         <div className={classNames('fixed left-0 right-0 flex items-center')}>
           <div className='px-7 py-5 relative z-[60] flex flex-1 items-center justify-between'>
             <div className='flex items-center space-x-1.5 ssm:space-x-3 pointer-events-auto'>
-              {/* <Link
-                className="block tabbable rounded-full text-xs ssm:text-base"
-                to="/"
+              <Link
+                className='block tabbable rounded-full text-xs ssm:text-base'
+                href='/'
               >
                 <BrandPill clickable />
               </Link>
 
-              <GoToLink
+              {/* <GoToLink
                 className="block tabbable rounded-full text-xs ssm:text-base"
                 href="/anime"
               >
