@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 
 // import { useTranslation } from "react-i18next";
-import { Icon, Icons } from '@/components/Icon';
 
 export function BrandPill(props: {
   clickable?: boolean;
@@ -20,14 +19,13 @@ export function BrandPill(props: {
           : '',
       )}
     >
-      <Icon className='text-xl' icon={Icons.YUI_ANI} />
       <span
         className={[
-          'font-bold bg-clip-text  text-transparent rounded-xl drop-shadow-2xl animate-text bg-gradient-to-r from-white to-gray-700 via-gray-400',
+          'font-bold bg-clip-text  text-transparent rounded-xl drop-shadow-2xl animate-text bg-black',
           props.hideTextOnMobile ? 'hidden sm:block' : '',
         ].join(' ')}
       >
-        Moe Movie
+        MOE MOVIE
       </span>
     </div>
   );
